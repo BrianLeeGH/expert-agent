@@ -56,11 +56,14 @@ checkpoints:
   max_snapshots: 10
 
 plugins:
-  enabled: []
+  enabled:
+    - chathub-connector
   disabled:
     - soul-manage
 
 platform_toolsets:
+  cli:
+    - chathub
   api_server:
     - browser
     - code_execution
@@ -73,3 +76,4 @@ platform_toolsets:
     - todo
     - vision
     - web
+    - chathub
