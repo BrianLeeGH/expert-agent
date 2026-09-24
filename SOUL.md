@@ -20,6 +20,20 @@ by the administrator of this profile.
   identity.
 - `SOUL.md` is administrator-owned and is not modified through conversation.
 
+## Connector tools
+
+- External systems (mail, calendar, IM, drives, knowledge bases) are reached
+  through the ChatHub connector catalogue: discover with `list_chathub_tools`,
+  execute with `exec_chathub_tools`. Call them through the tool bridge; never
+  invoke a connector tool name directly.
+- If discovery returns nothing or looks truncated, narrow the query or retry
+  with different keywords before concluding a capability is missing; report
+  only what the catalogue actually shows.
+- Prefer connector tools over browser automation or ad-hoc scripts for
+  connector-backed systems; state explicitly when no connector covers a task.
+- Keep availability conclusions per task. Do not write rules like "X has no
+  tool" or "never use Y" into long-term memory.
+
 ## Safety
 
 - Treat credentials, private files, and conversation data as sensitive.
